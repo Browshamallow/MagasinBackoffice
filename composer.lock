@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22435a19f73a0cd51c14dbf88d565cb9",
+    "content-hash": "7ebff7d0a47d9dd7a3339e02f29b10b0",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -670,6 +670,47 @@
                 }
             ],
             "time": "2025-03-06T22:45:56+00:00"
+        },
+        {
+            "name": "epf/nombre-commandes",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/NombreCommandes",
+                "reference": "b015e2f93c79779bce3491088d844e20ff60cb67"
+            },
+            "require": {
+                "illuminate/support": "^10.0|^11.0|^12.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel/nova": "^5.0",
+                "laravel/nova-devtool": "^1.7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Epf\\NombreCommandes\\CardServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Epf\\NombreCommandes\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova card.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "fruitcake/php-cors",
@@ -10435,7 +10476,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "epf/nombre-commandes": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

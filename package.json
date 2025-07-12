@@ -4,7 +4,9 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "build-nombre-commandes": "cd nova-components/NombreCommandes && npm run dev",
+        "build-nombre-commandes-prod": "cd nova-components/NombreCommandes && npm run prod"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",

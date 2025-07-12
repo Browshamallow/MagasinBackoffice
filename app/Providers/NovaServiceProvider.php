@@ -55,13 +55,13 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         Gate::define('viewNova', function (User $user) {
             return in_array($user->email, [
-                //
+                'admin@magasin.com', // Ajoutez l'email de l'administrateur
             ]);
         });
     }
 
     /**
-     * Get the dashboards that should be listed in the Nova sidebar.
+     * Obtenir les tableaux de bord qui doivent être listés dans la barre latérale Nova.
      *
      * @return array<int, \Laravel\Nova\Dashboard>
      */
@@ -69,11 +69,12 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         return [
             new \App\Nova\Dashboards\Main,
+            new \App\Nova\Dashboards\StatistiquesMagasin,
         ];
     }
 
     /**
-     * Get the tools that should be listed in the Nova sidebar.
+     * Obtenir les outils qui doivent être listés dans la barre latérale Nova.
      *
      * @return array<int, \Laravel\Nova\Tool>
      */
